@@ -35,8 +35,8 @@ let game4 = {
 }
 
 let choice1 = document.getElementById(`MW2`);
-choice1.insertAdjacentElement(`afterbegin`,`<p>Price:${game1.price}</p>`);
-choice1.insertAdjacentElement(`afterbegin`,`<p>Discription:${game1.description}</p>`);
-choice1.insertAdjacentElement(`afterbegin`,`<img src="${game1.imageUrl}" alt="CODMW2">`);
-choice1.insertAdjacentElement(`afterbegin`,`<p>Title:${game1.name}</p>`);
+choice1.insertAdjacentHTML(`afterbegin`,`<p>Price:${game1.price}</p>`);
+choice1.insertAdjacentHTML(`afterbegin`,`<p>Discription:${game1.description}</p>`);
+choice1.insertAdjacentHTML(`afterbegin`,`<img src="${game1.imageUrl}" alt="CODMW2">`);
+choice1.insertAdjacentHTML(`afterbegin`,`<p>Title:${game1.name}</p>`);
 
