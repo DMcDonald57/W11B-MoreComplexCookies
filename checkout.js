@@ -1,7 +1,11 @@
-let selectionJson = Cookies.get(`gameSelection`);
-let selection = JSON.parse(gameJson);
+document.body.style.backgroundColor = "bisque"
 
-document.body.insertAdjacentHTML(`afterbegin`, `<p>${selection.description}</p>`);
-document.body.insertAdjacentHTML(`afterbegin`, `<p>Price: ${selection.price}</p>`);
-document.body.insertAdjacentHTML(`afterbegin`,`<img src="${selection.imageUrl}" alt="Samsung Galaxy">`);
-document.body.insertAdjacentHTML(`afterbegin`,`<h2>${selection.title}</h2>`);
+
+let selectionJSON = Cookies.get(`MW2`);
+let selection = JSON.parse(selectionJSON);
+
+document.body.insertAdjacentHTML(`beforeend`,`<h3>${selection.title}</h3>`);
+document.body.insertAdjacentHTML(`beforeend`,`<p>${selection.price}</p>`);
+document.body.insertAdjacentHTML(`beforeend`,`<p>${selection.description}</p>`);
+document.body.insertAdjacentHTML(`beforeend`,`<img src="${selection.imageUrl}"alt="test">`);
+

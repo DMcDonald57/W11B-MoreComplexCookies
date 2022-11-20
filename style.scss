@@ -3,7 +3,7 @@ header > h1{
 }
 
 main > div{
-    padding-top: 20px;
+    padding-top: 40px;
     
 }
 main button{
@@ -22,4 +22,13 @@ header button{
     border-radius: 15px;
     font-size: 12pt;
     font-weight: bold;
+}
+#topButton{
+    background-color: firebrick;
+    height: 30px;
+    width: 200px;
+    border-radius: 15px;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-left: 30%;
 }
