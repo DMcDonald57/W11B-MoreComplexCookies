@@ -1,21 +1,37 @@
 document.body.style.backgroundColor = "bisque"
 
-function choiceHandler(event){
-    let parent = event.target.parentElement;
-    if (parent.id == "MW2"){
-        let gameJson = JSON.stringify(game1);
-        Cookies.set('gameSelection', gameJson)
-    } else if (parent.id == "Skyrim"){
-        let gameJson = JSON.stringify(game2);
-        Cookies.set('gameSelection', gameJson)
-    } else if (parent.id == "FarCry6"){
-        let gameJson = JSON.stringify(game3);
-        Cookies.set('gameSelection', gameJson)
-    } else if (parent.id == "Horizan5"){
-        let gameJson = JSON.stringify(game4);
-        Cookies.set('gameSelection', gameJson)
+function choiceHandler(event) {
+    let choice = event.target.parentElement;
+    if (choice.id == `MW2`) {
+            let gameJSON = JSON.stringify(game1);
+            Cookies.set(`MW2`, gameJSON)
+    }else if (choice.id == `Skyrim`) {
+            let gameJSON = JSON.stringify(game2);
+            Cookies.set(`Skyrim`, gameJSON)
+    }else if (choice.id ==`FarCry6`) {
+            let gameJSON = JSON.stringify(game3);
+            Cookies.set(`FarCry6`, gameJSON)
+    } else if (choice.id == `Horizon5`) {
+            let gameJSON = JSON.stringify(game4);
+            Cookies.set(`Horizon5`, gameJSON)
+    } else {
+        return(`Please make a selection.`);
+    }
 }
-}
+
+// //     }else if (parent.id == "Skyrim"){
+//         let gameJson = JSON.stringify(game2);
+//         Cookies.set('Skyrim', gameJson)
+//     }else if (parent.id == "FarCry6"){
+//         let gameJson = JSON.stringify(game3);
+//         Cookies.set('gFarCry6', gameJson)
+//     }else if (parent.id == "Horizon5"){
+//         let gameJson = JSON.stringify(game4);
+//         Cookies.set('Horizon5', gameJson)
+//      }else{
+//     return{'Please make a selection.'};
+// }
+// }
 
 // First item
 let game1 = {
@@ -45,7 +61,7 @@ let game3 = {
 
 // Forth item
 let game4 = {
-    name : `Forza Horizan 5`,
+    name : `Forza Horizon 5`,
     imageUrl : `https://s.cdnshm.com/catalog/hu/t/156766933/forza-horizon-5-digitalis-kulcs-xbox.jpg`,
     price : `$69.00`,
     description :`Race your way to the top through the 
@@ -74,8 +90,15 @@ choice3.insertAdjacentHTML(`afterbegin`,`<img src="${game3.imageUrl}" alt="FarCr
 choice3.insertAdjacentHTML(`afterbegin`,`<p>Title:${game3.name}</p>`);
 
 // inserting item details
-let choice4 = document.getElementById(`Horizan5`);
+let choice4 = document.getElementById(`Horizon5`);
 choice4.insertAdjacentHTML(`afterbegin`,`<p>Price:${game4.price}</p>`);
 choice4.insertAdjacentHTML(`afterbegin`,`<p>Discription:${game4.description}</p>`);
-choice4.insertAdjacentHTML(`afterbegin`,`<img src="${game4.imageUrl}" alt="Horizan5">`);
+choice4.insertAdjacentHTML(`afterbegin`,`<img src="${game4.imageUrl}" alt="Horizon5">`);
 choice4.insertAdjacentHTML(`afterbegin`,`<p>Title:${game4.name}</p>`);
+
+
+let choices = []
+choice1.querySelector(`button`).addEventListener(`click`, choiceHandler);
+choice2.querySelector(`button`).addEventListener(`click`, choiceHandler);
+choice3.querySelector(`button`).addEventListener(`click`, choiceHandler);
+choice4.querySelector(`button`).addEventListener(`click`, choiceHandler);
