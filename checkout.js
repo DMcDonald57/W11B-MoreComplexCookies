@@ -1,5 +1,6 @@
 document.body.style.backgroundColor = "bisque"
 
+// This converts the selection from apps to the checkout page
 
 let selectionJSON = Cookies.get(`MW2`);
 let selection = JSON.parse(selectionJSON);

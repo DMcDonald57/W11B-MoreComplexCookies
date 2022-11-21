@@ -84,7 +84,7 @@ choice4.insertAdjacentHTML(`afterbegin`,`<p>${game4.description}</p>`);
 choice4.insertAdjacentHTML(`afterbegin`,`<img src="${game4.imageUrl}" alt="Horizon5">`);
 choice4.insertAdjacentHTML(`afterbegin`,`<p>${game4.title}</p>`);
 
-
+// This activates the JS when the game selection button is pressed
 let choices = []
 choice1.querySelector(`button`).addEventListener(`click`, choiceHandler);
 choice2.querySelector(`button`).addEventListener(`click`, choiceHandler);
