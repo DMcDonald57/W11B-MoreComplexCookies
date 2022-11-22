@@ -30,18 +30,19 @@ function choiceHandler(event) {
     if (choice.id == `MW2`) {
             let game1JSON = JSON.stringify(game1);
             Cookies.set(`MW2`, game1JSON)
-    }else (choice.id == `Skyrim`); {
+    }else if (choice.id == `Skyrim`) {
             let game2JSON = JSON.stringify(game2);
             Cookies.set(`Skyrim`, game2JSON)
-    }else (choice.id ==`FarCry6`); {
+    }else if (choice.id ==`FarCry6`) {
             let game3JSON = JSON.stringify(game3);
             Cookies.set(`FarCry6`, game3JSON)
-    }else (choice.id == `Horizon5`); {
+    }else if (choice.id == `Horizon5`) {
             let game4JSON = JSON.stringify(game4);
             Cookies.set(`Horizon5`, game4JSON);
     }else{
         return(`<p>Please make a selection.</p>`);
     }
+    
 }
 
 
